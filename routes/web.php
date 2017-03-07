@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/dvds/search', function () {
+//     return view('search');
+// });
+
+Route::get('/', 'SearchController@search');
+Route::get('/dvds/search', 'SearchController@search');
+Route::get('/dvds', 'SearchController@results');
